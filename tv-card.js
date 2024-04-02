@@ -175,7 +175,7 @@ class TVCardServices extends LitElement {
                     "volume_up": {"icon": "mdi:volume-plus", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_UP"}},
                     "volume_down": {"icon": "mdi:volume-minus", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_DOWN"}},
                     "volume_mute": {"icon": "mdi:volume-mute", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_MUTE"}},
-                    "return": {"icon": "mdi:arrow-u-left-top", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "ENTER"}},
+                    "return": {"icon": "mdi:arrow-u-left-top", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "BACK"}},
                     "info": {"icon": "mdi:asterisk", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "INFO"}},
                     "home": {"icon": "mdi:home", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "HOME"}},
                     "channel_up": {"icon": "mdi:arrow-up", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "CHANNEL_UP"}},
