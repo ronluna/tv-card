@@ -166,7 +166,7 @@ class TVCardServices extends LitElement {
                     "num_9": {"icon": "mdi:numeric-9", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "Num9"}},
                 };
                 break;
-            case "androidrmeote": {
+            case "androidremote": {
                 let remote_entity = !config.remote_entity ? "remote." + config.entity.split(".")[1] : config.remote_entity;
                 this.keys = {
                     "power": {"icon": "mdi:power", "service": "remote.toggle", "service_data": { "entity_id": remote_entity}},
