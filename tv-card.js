@@ -166,6 +166,42 @@ class TVCardServices extends LitElement {
                     "num_9": {"icon": "mdi:numeric-9", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "Num9"}},
                 };
                 break;
+            case "androidrmeote": {
+                let remote_entity = !config.remote_entity ? "remote." + config.entity.split(".")[1] : config.remote_entity;
+                this.keys = {
+                    "power": {"icon": "mdi:power", "service": "remote.toggle", "service_data": { "entity_id": remote_entity}},
+                    "source": {"icon": "mdi:import", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "Input"}},
+                    "volume_up": {"icon": "mdi:volume-plus", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_UP"}},
+                    "volume_down": {"icon": "mdi:volume-minus", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_DOWN"}},
+                    "volume_mute": {"icon": "mdi:volume-mute", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "VOLUME_MUTE"}},
+                    "return": {"icon": "mdi:arrow-u-left-top", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "ENTER"}},
+                    "info": {"icon": "mdi:asterisk", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "INFO"}},
+                    "home": {"icon": "mdi:home", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "HOME"}},
+                    "channel_up": {"icon": "mdi:arrow-up", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "CHANNEL_UP"}},
+                    "channel_down": {"icon": "mdi:arrow-down", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "CHANNEL_DOWN"}},
+                    "up": {"icon": "mdi:chevron-up", "service": "androidtv.adb_command", "service_data": { "entity_id": remote_entity, "command": "DPAD_UP"}},
+                    "left": {"icon": "mdi:chevron-left", "service": "androidtv.adb_command", "service_data": { "entity_id": remote_entity, "command": "DPAD_LEFT"}},
+                    "enter": {"icon": "mdi:checkbox-blank-circle", "service": "androidtv.adb_command", "service_data": { "entity_id": remote_entity, "command": "DPAD_CENTER"}},
+                    "right": {"icon": "mdi:chevron-right", "service": "androidtv.adb_command", "service_data": { "entity_id": remote_entity, "command": "DPAD_RIGHT"}},
+                    "down": {"icon": "mdi:chevron-down", "service": "androidtv.adb_command", "service_data": { "entity_id": remote_entity, "command": "DPAD_DOWN"}},
+                    "rewind": {"icon": "mdi:rewind", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "MEDIA_REWIND"}},
+                    "play": {"icon": "mdi:play-pause", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "MEDIA_PLAY_PAUSE"}},
+                    "pause": {"icon": "mdi:pause", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "MEDIA_PLAY_PAUSE"}},
+                    "fast_forward": {"icon": "mdi:fast-forward", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "MEDIA_FAST_FORWARD"}},
+                    "settings": {"icon": "mdi:cog", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "SETTINGS"}},
+                    "assistant": {"icon": "mdi:google-assistant", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "ASSIST"}},
+                    "num_0": {"icon": "mdi:numeric-0", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "0"}},
+                    "num_1": {"icon": "mdi:numeric-1", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "1"}},
+                    "num_2": {"icon": "mdi:numeric-2", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "2"}},
+                    "num_3": {"icon": "mdi:numeric-3", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "3"}},
+                    "num_4": {"icon": "mdi:numeric-4", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "4"}},
+                    "num_5": {"icon": "mdi:numeric-5", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "5"}},
+                    "num_6": {"icon": "mdi:numeric-6", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "6"}},
+                    "num_7": {"icon": "mdi:numeric-7", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "7"}},
+                    "num_8": {"icon": "mdi:numeric-8", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "8"}},
+                    "num_9": {"icon": "mdi:numeric-9", "service": "remote.send_command", "service_data": { "entity_id": remote_entity, "command": "9"}},
+                };
+                break;
             }
             case "appletv": {
                 let remote_entity = !config.remote_entity ? "remote." + config.entity.split(".")[1] : config.remote_entity;
